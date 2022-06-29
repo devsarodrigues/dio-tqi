@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: linear-gradient(to right, #900392, #188c8e);
+    min-height: 100vh;
+  }
+  
+  header, form {
+    font-size: 1.5rem;
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  form input, form button {
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    background: #fff;
+  }
+  
+  form button {
+    color: #060827;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  form button:hover {
+    background: #060827;
+    color: #fff;
+  }
+  
+  .todo-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+  
+  .todo-list {
+    min-width: 30%;
+    list-style: none;
+  }
+  
+  .todo {
+    margin: 0.5rem;
+    background: #fff;
+    color: #000;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    transition: all 0.5s ease;
+  }
+  
+  .todo li {
+    flex: 1;
+  }
+  
+  .trash-btn, .completed-btn {
+    background: #060827;
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .completed-btn {
+    background: rgb(108, 4, 85);
+  }
+
+  .fa-trash, .fa-check {
+      pointer-events: none;
+  }
+
+  .completed {
+      text-decoration: line-through;
+      opacity: 0.5;
+  }
+
+  .fall {
+      transform: translate(8rem) rotate(20deg);
+      opacity: 0;
+  }
+
+  select {
+      appearance: none;
+      outline: none;
+      border: none;
+      color: #060827;
+      width: 10rem;
+      cursor: pointer;
+      padding: 1rem;
+  }
+
+  .select {
+      margin: 1rem;
+      position: relative;
+      overflow: hidden
+  }
+
+  .select::after {
+      content: "\25BC";
+      position: absolute;
+      background: #fff;
+      top: 0;
+      right: 0;
+      padding: 1rem;
+      pointer-events: none;
+      transform: all 0.3s ease;
+  }
+
+  .select:houver::after {
+      background: #060827;
+      color: #fff;
+  }
